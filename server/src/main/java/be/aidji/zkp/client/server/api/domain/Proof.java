@@ -1,22 +1,30 @@
 package be.aidji.zkp.client.server.api.domain;
 
-import java.security.PublicKey;
+import java.util.Arrays;
 
 public class Proof {
 
-    private final byte[] signature;
-    private final PublicKey publicKey;
+    private final byte[] signatureEncoded;
+    private final byte[] publicKeyEncoded;
 
-    public Proof(byte[] signature, PublicKey publicKey) {
-        this.signature = signature;
-        this.publicKey = publicKey;
+    public Proof(byte[] signatureEncoded, byte[] publicKeyEncoded) {
+        this.signatureEncoded = signatureEncoded;
+        this.publicKeyEncoded = publicKeyEncoded;
     }
 
-    public byte[] getSignature() {
-        return signature;
+    public byte[] getSignatureEncoded() {
+        return signatureEncoded;
     }
 
-    public PublicKey getPublicKey() {
-        return publicKey;
+    public byte[] getPublicKeyEncoded() {
+        return publicKeyEncoded;
+    }
+
+    @Override
+    public String toString() {
+        return "Proof{" +
+                "signatureEncoded=" + Arrays.toString(signatureEncoded) + "\n" +
+                ", publicKeyEncoded=" + Arrays.toString(publicKeyEncoded) + "\n" +
+                '}';
     }
 }
