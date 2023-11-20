@@ -29,7 +29,9 @@ public class SchnorrClient {
 
         // Send commitment and retrieve challenge from server
         BigInteger challenge = sendCommitment(commitment);
-        BigInteger proof = r.add(challenge.multiply(privateKey)).mod(P.subtract(BigInteger.ONE));
+        BigInteger proof = r
+                .add(challenge.multiply(privateKey))
+                .mod(P.subtract(BigInteger.ONE));
 
         // Compute the proof and send to the server with the public key
         SchnorrProof schnorrProof = new SchnorrProof
