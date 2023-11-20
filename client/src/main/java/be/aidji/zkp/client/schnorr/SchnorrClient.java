@@ -17,21 +17,28 @@ public class SchnorrClient {
 
     public static void main(String[] args) {
 
+        // Generate the private key and compute a public key
         BigInteger privateKey = new BigInteger("E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233", 16);
         BigInteger publicKey = G.modPow(privateKey, P);
 
+        //privateKey = new BigInteger("E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC234", 16);
+
+        // Generate the commitment
         BigInteger r = new BigInteger(256, RANDOM);
         BigInteger commitment = G.modPow(r, P);
 
+        // Send commitment and retrieve challenge from server
         BigInteger challenge = sendCommitment(commitment);
         BigInteger proof = r.add(challenge.multiply(privateKey)).mod(P.subtract(BigInteger.ONE));
 
+        // Compute the proof and send to the server with the public key
         SchnorrProof schnorrProof = new SchnorrProof
                 (
                         publicKey,
                         proof
                 );
 
+        // Get response from server
         boolean isVerified = sendForVerification(schnorrProof);
         LOGGER.info("Proof verified: " + isVerified);
     }
