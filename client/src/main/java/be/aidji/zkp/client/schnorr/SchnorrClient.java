@@ -29,18 +29,19 @@ public class SchnorrClient {
 
         // Send commitment and retrieve challenge from server
         BigInteger challenge = sendCommitment(commitment);
+
+        // Compute the proof
         BigInteger proof = r
                 .add(challenge.multiply(privateKey))
                 .mod(P.subtract(BigInteger.ONE));
 
-        // Compute the proof and send to the server with the public key
         SchnorrProof schnorrProof = new SchnorrProof
                 (
                         publicKey,
                         proof
                 );
 
-        // Get response from server
+        // Send proof and get response from server
         boolean isVerified = sendForVerification(schnorrProof);
         LOGGER.info("Proof verified: " + isVerified);
     }
