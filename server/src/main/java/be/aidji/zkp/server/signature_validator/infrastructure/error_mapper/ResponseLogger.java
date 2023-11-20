@@ -1,4 +1,4 @@
-package be.aidji.zkp.client.server.api.infrastructure.error_mapper;
+package be.aidji.zkp.server.signature_validator.infrastructure.error_mapper;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

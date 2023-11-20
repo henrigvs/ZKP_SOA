@@ -1,4 +1,4 @@
-package be.aidji.zkp.client.server.api.infrastructure.error_mapper;
+package be.aidji.zkp.server.signature_validator.infrastructure.error_mapper;
 
 public class ErrorResponse {
 

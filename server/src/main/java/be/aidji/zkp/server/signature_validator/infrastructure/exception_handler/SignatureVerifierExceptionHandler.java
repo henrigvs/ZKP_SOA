@@ -1,8 +1,8 @@
-package be.aidji.zkp.client.server.api.infrastructure.exception_handler;
+package be.aidji.zkp.server.signature_validator.infrastructure.exception_handler;
 
-import be.aidji.zkp.client.server.api.infrastructure.error_mapper.ErrorResponse;
-import be.aidji.zkp.client.server.api.infrastructure.error_mapper.ResponseLogger;
-import be.aidji.zkp.client.server.api.infrastructure.exception.SignatureVerifierException;
+import be.aidji.zkp.server.signature_validator.infrastructure.error_mapper.ErrorResponse;
+import be.aidji.zkp.server.signature_validator.infrastructure.error_mapper.ResponseLogger;
+import be.aidji.zkp.server.signature_validator.infrastructure.exception.SignatureVerifierException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

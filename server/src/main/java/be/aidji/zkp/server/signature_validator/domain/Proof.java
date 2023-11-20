@@ -1,4 +1,4 @@
-package be.aidji.zkp.client.server.api.domain;
+package be.aidji.zkp.server.signature_validator.domain;
 
 import java.util.Arrays;
 

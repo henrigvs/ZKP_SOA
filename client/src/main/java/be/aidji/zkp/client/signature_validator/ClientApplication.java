@@ -1,4 +1,4 @@
-package be.aidji.zkp.client;
+package be.aidji.zkp.client.signature_validator;
 
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;

@@ -1,4 +1,4 @@
-package be.aidji.zkp.client.server.api.infrastructure.exception;
+package be.aidji.zkp.server.signature_validator.infrastructure.exception;
 
 public class SignatureVerifierException extends RuntimeException{
 

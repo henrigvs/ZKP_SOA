@@ -1,4 +1,4 @@
-package be.aidji.zkp.client.server;
+package be.aidji.zkp.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

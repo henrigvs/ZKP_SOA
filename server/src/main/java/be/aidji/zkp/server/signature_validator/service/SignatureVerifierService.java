@@ -1,8 +1,8 @@
-package be.aidji.zkp.client.server.api.service;
+package be.aidji.zkp.server.signature_validator.service;
 
 
-import be.aidji.zkp.client.server.api.domain.Proof;
-import be.aidji.zkp.client.server.api.infrastructure.exception.SignatureVerifierException;
+import be.aidji.zkp.server.signature_validator.domain.Proof;
+import be.aidji.zkp.server.signature_validator.infrastructure.exception.SignatureVerifierException;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

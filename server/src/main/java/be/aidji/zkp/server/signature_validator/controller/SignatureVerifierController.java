@@ -1,8 +1,8 @@
-package be.aidji.zkp.client.server.api.controller;
+package be.aidji.zkp.server.signature_validator.controller;
 
 
-import be.aidji.zkp.client.server.api.domain.Proof;
-import be.aidji.zkp.client.server.api.service.SignatureVerifierService;
+import be.aidji.zkp.server.signature_validator.domain.Proof;
+import be.aidji.zkp.server.signature_validator.service.SignatureVerifierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
